@@ -1,63 +1,44 @@
 body {
-    font-family: Verdana, sans-serif;
-    background-color: #35136b;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
 }
 
-main {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
+#title {
+  font-size: 24px;
+  margin: 20px 0;
 }
 
-h1 {
-    color: #333;
+#chart-container {
+  display: inline-block;
+  position: relative;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+#chart {
+  background-color: white;
+  border: 1px solid #ccc;
 }
 
-input {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    display: block; 
-    margin-left: auto; 
-    margin-right: auto; 
+.bar {
+  fill: steelblue;
+  transition: fill 0.2s ease;
 }
 
-button {
-    background-color: #722be3;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    display: inline-block;
+.bar:hover {
+  fill: orange;
 }
 
-button:hover {
-    background-color: #35136b;
+#tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  pointer-events: none;
+  visibility: hidden;
+  text-align: center;
 }
 
-#result {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
+.tick text {
+  font-size: 12px;
 }
